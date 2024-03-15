@@ -36,9 +36,9 @@ class Generate:
         return self._found_urls
     
     def start(self):
-        current_date = datetime.now().strftime('%Y-%m-%d')
         self._scrape_and_search_urls(self._url)
 
+        current_date = datetime.now().strftime('%Y-%m-%d')
         rootXML = ET.Element("urlset", xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
 
         self._found_urls.sort()
